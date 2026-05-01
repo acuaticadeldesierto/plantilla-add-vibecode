@@ -80,36 +80,35 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="py-20 px-6">
-      <div className="max-w-2xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {heading}
+    <section id="contacto" className="section-pad bg-surface-darker text-white">
+      <div className="container-wide grid lg:grid-cols-12 gap-12 lg:gap-20">
+        <div className="lg:col-span-5">
+          <p className="eyebrow text-accent mb-5">Contacto</p>
+          <h2 className="display-2 mb-6">
+            {heading} <br />
+            <span className="italic font-light text-white/70">{subheading}</span>
           </h2>
-          <p className="text-lg text-gray-600">
-            {subheading}
-          </p>
           {schedulingUrl && (
             <a
               href={schedulingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-4 px-6 py-2.5 border border-indigo-600 text-indigo-600 font-medium rounded-full hover:bg-indigo-50 transition-colors text-sm"
+              className="mt-8 inline-flex items-center justify-center rounded-full border border-white/25 bg-white/5 px-7 py-4 text-base font-medium backdrop-blur-md transition-colors hover:bg-white/10"
             >
               {schedulingCta}
             </a>
           )}
+          <div className="mt-12 space-y-4 text-sm text-white/60">
+            <p>Chihuahua, Chihuahua, México</p>
+            <p>Lunes a sábado · 6:00 — 20:00</p>
+          </div>
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          noValidate
-          className="bg-white border border-gray-200 rounded-2xl p-8 space-y-6"
-        >
+        <form onSubmit={handleSubmit} noValidate className="lg:col-span-7 space-y-6">
           {/* Nombre */}
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-              Nombre
+            <label htmlFor="name" className="block text-xs uppercase tracking-[0.18em] text-white/50 mb-1">
+              Nombre completo
             </label>
             <input
               id="name"
@@ -118,18 +117,18 @@ export default function ContactForm() {
               value={form.name}
               onChange={handleChange}
               placeholder={formConfig.namePlaceholder}
-              className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition ${
-                errors.name ? "border-red-400 bg-red-50" : "border-gray-300"
+              className={`w-full bg-transparent border-0 border-b py-4 text-lg text-white placeholder-white/30 focus:outline-none focus:ring-0 transition-colors ${
+                errors.name ? "border-red-400" : "border-white/20 focus:border-[hsl(var(--accent))]"
               }`}
             />
             {errors.name && (
-              <p className="mt-1.5 text-sm text-red-600">{errors.name}</p>
+              <p className="mt-2 text-xs text-accent">{errors.name}</p>
             )}
           </div>
 
           {/* Email */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-xs uppercase tracking-[0.18em] text-white/50 mb-1">
               Email
             </label>
             <input
@@ -139,22 +138,19 @@ export default function ContactForm() {
               value={form.email}
               onChange={handleChange}
               placeholder={formConfig.emailPlaceholder}
-              className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition ${
-                errors.email ? "border-red-400 bg-red-50" : "border-gray-300"
+              className={`w-full bg-transparent border-0 border-b py-4 text-lg text-white placeholder-white/30 focus:outline-none focus:ring-0 transition-colors ${
+                errors.email ? "border-red-400" : "border-white/20 focus:border-[hsl(var(--accent))]"
               }`}
             />
             {errors.email && (
-              <p className="mt-1.5 text-sm text-red-600">{errors.email}</p>
+              <p className="mt-2 text-xs text-accent">{errors.email}</p>
             )}
           </div>
 
           {/* Telefono */}
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-              Telefono
-              {!formConfig.phoneRequired && (
-                <span className="ml-1.5 text-gray-400 font-normal">(opcional)</span>
-              )}
+            <label htmlFor="phone" className="block text-xs uppercase tracking-[0.18em] text-white/50 mb-1">
+              Teléfono {!formConfig.phoneRequired ? <span className="text-white/40 normal-case">(opcional)</span> : null}
             </label>
             <input
               id="phone"
@@ -163,18 +159,18 @@ export default function ContactForm() {
               value={form.phone}
               onChange={handleChange}
               placeholder={formConfig.phonePlaceholder}
-              className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition ${
-                errors.phone ? "border-red-400 bg-red-50" : "border-gray-300"
+              className={`w-full bg-transparent border-0 border-b py-4 text-lg text-white placeholder-white/30 focus:outline-none focus:ring-0 transition-colors ${
+                errors.phone ? "border-red-400" : "border-white/20 focus:border-[hsl(var(--accent))]"
               }`}
             />
             {errors.phone && (
-              <p className="mt-1.5 text-sm text-red-600">{errors.phone}</p>
+              <p className="mt-2 text-xs text-accent">{errors.phone}</p>
             )}
           </div>
 
           {/* Mensaje */}
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="message" className="block text-xs uppercase tracking-[0.18em] text-white/50 mb-1">
               Mensaje
             </label>
             <textarea
@@ -184,33 +180,36 @@ export default function ContactForm() {
               value={form.message}
               onChange={handleChange}
               placeholder={formConfig.messagePlaceholder}
-              className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition resize-none ${
-                errors.message ? "border-red-400 bg-red-50" : "border-gray-300"
+              className={`w-full bg-transparent border-0 border-b py-4 text-lg text-white placeholder-white/30 focus:outline-none focus:ring-0 transition-colors resize-none ${
+                errors.message ? "border-red-400" : "border-white/20 focus:border-[hsl(var(--accent))]"
               }`}
             />
             {errors.message && (
-              <p className="mt-1.5 text-sm text-red-600">{errors.message}</p>
+              <p className="mt-2 text-xs text-accent">{errors.message}</p>
             )}
           </div>
 
           <button
             type="submit"
             disabled={status === "loading"}
-            className="w-full py-3.5 bg-indigo-600 text-white font-medium rounded-full hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="mt-4 inline-flex w-full md:w-auto items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-medium text-accent-foreground shadow-accent transition-all duration-300 hover:scale-[1.02] hover:shadow-glow disabled:opacity-60 disabled:hover:scale-100"
           >
             {status === "loading" ? formConfig.sendingButton : formConfig.submitButton}
           </button>
 
           {status === "success" && (
-            <p className="text-center text-green-600 font-medium">
+            <p className="text-sm text-white/80">
               {formConfig.successMessage}
             </p>
           )}
           {status === "error" && (
-            <p className="text-center text-red-600 font-medium">
+            <p className="text-sm text-accent">
               {serverError || formConfig.errorMessage}
             </p>
           )}
+          <p className="text-xs text-white/40">
+            Al enviar, guardamos tus datos y te respondemos lo antes posible.
+          </p>
         </form>
       </div>
     </section>

@@ -22,32 +22,30 @@ export default function Features() {
   const { heading, subheading, items } = siteConfig.features;
 
   return (
-    <section id="features" className="py-20 px-6 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {heading}
+    <section id="features" className="section-pad bg-background">
+      <div className="container-wide">
+        <div className="max-w-3xl mb-16 md:mb-20">
+          <p className="eyebrow text-accent mb-5">Lo que ofrecemos</p>
+          <h2 className="display-2 text-[hsl(var(--foreground))]">
+            {heading} <br />
+            <span className="italic font-light text-black/50">{subheading}</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {subheading}
-          </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+
+        <div className="grid md:grid-cols-3 gap-6">
           {items.map((feature, index) => (
-            <div
+            <article
               key={index}
-              className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow"
+              className="rounded-2xl border border-black/10 bg-white p-8 lg:p-10 transition-all duration-500 hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-5">
+              <div className="mb-5 inline-flex size-12 items-center justify-center rounded-2xl bg-surface-light text-[hsl(var(--foreground))]">
                 {iconMap[feature.icon] ?? iconMap.settings}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="font-serif text-2xl tracking-tight text-[hsl(var(--foreground))] mb-4">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
+              <p className="text-base leading-relaxed text-black/60">{feature.description}</p>
+            </article>
           ))}
         </div>
       </div>

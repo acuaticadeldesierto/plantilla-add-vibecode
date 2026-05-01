@@ -4,83 +4,62 @@ export default function Pricing() {
   const { heading, subheading, plans } = siteConfig.pricing;
 
   return (
-    <section id="pricing" className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {heading}
+    <section id="precios" className="section-pad bg-surface-light">
+      <div className="container-wide">
+        <div className="max-w-3xl mb-16 md:mb-20">
+          <p className="eyebrow text-accent mb-5">Precios</p>
+          <h2 className="display-2 text-[hsl(var(--foreground))]">
+            {heading} <br />
+            <span className="italic font-light text-black/50">{subheading}</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {subheading}
-          </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 items-start">
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {plans.map((plan, index) => (
-            <div
+            <article
               key={index}
-              className={`rounded-2xl p-8 border ${
+              className={`flex flex-col rounded-2xl p-7 transition-all duration-500 hover:-translate-y-1 ${
                 plan.highlighted
-                  ? "border-indigo-600 bg-indigo-600 text-white shadow-xl scale-105"
-                  : "border-gray-200 bg-white"
+                  ? "bg-surface-darker text-white shadow-lg relative"
+                  : "bg-white text-[hsl(var(--foreground))] border border-black/10"
               }`}
             >
-              <h3
-                className={`text-lg font-semibold mb-1 ${
-                  plan.highlighted ? "text-indigo-100" : "text-gray-900"
-                }`}
-              >
-                {plan.name}
-              </h3>
-              <p
-                className={`text-sm mb-6 ${
-                  plan.highlighted ? "text-indigo-200" : "text-gray-500"
-                }`}
-              >
+              {plan.highlighted && (
+                <span className="absolute -top-3 left-7 inline-flex rounded-full bg-accent px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-accent-foreground">
+                  Más elegido
+                </span>
+              )}
+
+              <h3 className="font-serif text-2xl mb-1">{plan.name}</h3>
+              <p className={`text-sm ${plan.highlighted ? "text-white/65" : "text-black/55"}`}>
                 {plan.description}
               </p>
-              <div className="mb-6">
-                <span className="text-4xl font-bold">{plan.price}</span>
-                <span
-                  className={`text-sm ${
-                    plan.highlighted ? "text-indigo-200" : "text-gray-500"
-                  }`}
-                >
+
+              <div className="mt-6 mb-6 flex items-baseline gap-1.5">
+                <span className="font-serif text-5xl tracking-tight">{plan.price}</span>
+                <span className={`text-xs ${plan.highlighted ? "text-white/55" : "text-black/50"}`}>
                   {plan.period}
                 </span>
               </div>
-              <ul className="space-y-3 mb-8">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm">
-                    <svg
-                      className={`w-5 h-5 shrink-0 ${
-                        plan.highlighted ? "text-indigo-200" : "text-indigo-600"
-                      }`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    {feature}
+
+              <ul className={`space-y-3 text-sm border-t pt-6 ${plan.highlighted ? "border-white/10" : "border-black/10"}`}>
+                {plan.features.map((f) => (
+                  <li key={f} className="flex items-start gap-2">
+                    <span className={`mt-2 inline-block size-1.5 rounded-full ${plan.highlighted ? "bg-accent" : "bg-black"}`} aria-hidden="true" />
+                    <span>{f}</span>
                   </li>
                 ))}
               </ul>
+
               <a
-                href="#contact"
-                className={`block w-full py-3 text-center rounded-full font-medium transition-colors ${
-                  plan.highlighted
-                    ? "bg-white text-indigo-600 hover:bg-indigo-50"
-                    : "bg-indigo-600 text-white hover:bg-indigo-700"
+                href="#contacto"
+                className={`mt-8 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition-transform duration-300 hover:scale-[1.02] ${
+                  plan.highlighted ? "bg-accent text-accent-foreground" : "bg-black text-white"
                 }`}
               >
                 {plan.cta}
               </a>
-            </div>
+            </article>
           ))}
         </div>
       </div>

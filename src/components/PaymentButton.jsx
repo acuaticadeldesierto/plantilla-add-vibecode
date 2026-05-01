@@ -52,7 +52,7 @@ export default function PaymentButton({ amount, className = "" }) {
       href={paypalUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-[#0070BA] hover:bg-[#005ea6] active:bg-[#004f96] text-white font-medium rounded-full transition-colors ${className}`}
+      className={`inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-[var(--color-navy-950)] hover:bg-[var(--color-navy-900)] active:bg-[var(--color-navy-900)] text-white font-medium tracking-tight rounded-full transition-colors duration-200 shadow-sm hover:shadow-md border border-transparent hover:border-[var(--color-gold-500)] ${className}`}
     >
       <PayPalIcon />
       {buttonText}

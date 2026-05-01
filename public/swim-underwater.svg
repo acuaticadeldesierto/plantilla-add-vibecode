@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="deep" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0284c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0c4a6e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skinU" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fcd9b4" />
+      <stop offset="100%" style="stop-color:#e8a87c" />
+    </linearGradient>
+    <radialGradient id="light1" cx="30%" cy="0%" r="50%">
+      <stop offset="0%" style="stop-color:#e0f2fe;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="light2" cx="70%" cy="0%" r="50%">
+      <stop offset="0%" style="stop-color:#e0f2fe;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Fondo agua -->
+  <rect width="800" height="600" fill="url(#deep)"/>
+
+  <!-- Rayos de luz desde la superficie -->
+  <polygon points="100,0 60,300 140,300" fill="url(#light1)" opacity="0.5"/>
+  <polygon points="280,0 250,250 310,250" fill="url(#light1)" opacity="0.4"/>
+  <polygon points="500,0 470,280 530,280" fill="url(#light2)" opacity="0.4"/>
+  <polygon points="700,0 665,310 735,310" fill="url(#light2)" opacity="0.5"/>
+
+  <!-- Superficie del agua (arriba) -->
+  <path d="M0 0 Q100 15 200 5 Q300 -5 400 8 Q500 18 600 5 Q700 -5 800 10 L800 0 Z" fill="#7dd3fc" opacity="0.6"/>
+
+  <!-- Burbujas de fondo -->
+  <circle cx="80" cy="500" r="5" fill="white" opacity="0.3"/>
+  <circle cx="90" cy="460" r="3" fill="white" opacity="0.25"/>
+  <circle cx="100" cy="420" r="4" fill="white" opacity="0.2"/>
+  <circle cx="200" cy="530" r="6" fill="white" opacity="0.25"/>
+  <circle cx="215" cy="490" r="4" fill="white" opacity="0.2"/>
+  <circle cx="620" cy="520" r="5" fill="white" opacity="0.3"/>
+  <circle cx="635" cy="480" r="3" fill="white" opacity="0.25"/>
+  <circle cx="730" cy="500" r="7" fill="white" opacity="0.2"/>
+  <circle cx="745" cy="450" r="4" fill="white" opacity="0.15"/>
+
+  <!-- Nadador bajo el agua - mariposa (butterfly) -->
+  <!-- Cuerpo arqueado -->
+  <path d="M200 320 Q280 290 360 285 Q420 282 500 295 Q550 305 590 320" stroke="url(#skinU)" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <!-- Cabeza -->
+  <circle cx="570" cy="300" r="26" fill="url(#skinU)"/>
+  <!-- Gorra -->
+  <ellipse cx="570" cy="286" rx="26" ry="17" fill="#0f172a"/>
+  <!-- Gafas bajo el agua -->
+  <rect x="556" y="298" width="12" height="8" rx="4" fill="#60a5fa" opacity="0.9"/>
+  <rect x="571" y="298" width="12" height="8" rx="4" fill="#60a5fa" opacity="0.9"/>
+  <line x1="568" y1="302" x2="571" y2="302" stroke="#60a5fa" stroke-width="2"/>
+  <!-- Brazos en butterfly -->
+  <path d="M510 295 Q560 255 610 240 Q650 230 680 245" stroke="url(#skinU)" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <path d="M300 295 Q250 258 220 242 Q190 230 165 248" stroke="url(#skinU)" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <!-- Traje azul -->
+  <ellipse cx="390" cy="295" rx="80" ry="14" fill="#1d4ed8" opacity="0.9"/>
+  <!-- Piernas y patada de delfín -->
+  <path d="M200 320 Q160 340 130 360 Q110 375 105 395" stroke="url(#skinU)" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <path d="M200 325 Q160 350 128 372 Q108 388 100 410" stroke="url(#skinU)" stroke-width="15" fill="none" stroke-linecap="round"/>
+  <!-- Aletas de los pies -->
+  <path d="M105 395 Q90 420 75 425 Q60 428 58 418" stroke="url(#skinU)" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M100 410 Q85 438 68 445 Q52 450 50 438" stroke="url(#skinU)" stroke-width="7" fill="none" stroke-linecap="round"/>
+
+  <!-- Burbujas que suelta el nadador -->
+  <circle cx="590" cy="285" r="4" fill="white" opacity="0.6"/>
+  <circle cx="600" cy="272" r="3" fill="white" opacity="0.5"/>
+  <circle cx="595" cy="260" r="5" fill="white" opacity="0.4"/>
+  <circle cx="606" cy="248" r="3" fill="white" opacity="0.3"/>
+  <circle cx="612" cy="238" r="4" fill="white" opacity="0.25"/>
+
+  <!-- Línea del fondo de la alberca -->
+  <line x1="60" y1="520" x2="740" y2="520" stroke="#0369a1" stroke-width="6" opacity="0.5"/>
+  <line x1="400" y1="475" x2="400" y2="560" stroke="#0369a1" stroke-width="6" opacity="0.5"/>
+
+  <!-- Texto -->
+  <text x="400" y="575" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle" opacity="0.9">Mariposa — La Técnica más Poderosa</text>
+</svg>

@@ -1,114 +1,286 @@
 /**
  * ARCHIVO DE CONFIGURACION CENTRAL
  * =================================
- * Este es el archivo que debes editar para personalizar tu landing page.
- * Cambia los textos, colores y datos de contacto aqui.
- * Los cambios se aplicaran automaticamente en toda la pagina.
+ * Aqui vive TODO el contenido del sitio (textos y datos).
+ * Los componentes lo leen desde este objeto.
  */
 
 export const siteConfig = {
   // ─────────────────────────────────────────────
   // INFORMACION DEL NEGOCIO
   // ─────────────────────────────────────────────
-  name: "VibeCoding",
-  tagline: "La plantilla perfecta para lanzar tu idea al mundo.",
+  name: "ADD",
+  tagline: "Escuela de natación para familias y alto rendimiento.",
   description:
-    "Rapido, moderno y listo para personalizar a tu gusto.",
+    "En Chihuahua, Chihuahua. Clases para niños y papás, entrenamiento de alto rendimiento, masters y triatlón, y renta de carriles para equipos.",
 
   // ─────────────────────────────────────────────
-  // SECCION HERO (la primera pantalla que ven los visitantes)
+  // SECCION HERO (primera pantalla)
   // ─────────────────────────────────────────────
   hero: {
-    badge: "Bienvenido a tu nuevo proyecto",
-    title: "Construye algo",
-    titleHighlight: "increible",
+    badge: "Chihuahua, Chihuahua",
+    title: "Vive el cambio de",
+    titleHighlight: "la natación en México",
     subtitle:
-      "La plantilla perfecta para lanzar tu idea al mundo. Rapido, moderno y listo para personalizar a tu gusto.",
-    ctaPrimary: "Empezar ahora",
-    ctaSecondary: "Ver mas",
-    // Enlace del boton principal. Puedes poner una URL de Calendly o Google Calendar.
-    // Ejemplo Calendly: "https://calendly.com/tu-usuario/30min"
-    // Ejemplo Google Calendar: "https://calendar.google.com/calendar/appointments/..."
+      "Un lugar cercano y motivador para aprender a nadar, entrenar en serio y disfrutar la alberca en familia. Programas para niños, papás, masters, triatlón, escuelas y empresas.",
+    ctaPrimary: "Quiero información",
+    ctaSecondary: "Ver programas",
     ctaPrimaryUrl: "#contacto",
-    ctaSecondaryUrl: "#features",
+    ctaSecondaryUrl: "#programas",
+    backgroundImage:
+      "/hero-swimmer.jpg",
+    stats: [
+      { value: "Chihuahua · El Reliz", label: "Sede" },
+      { value: "15", label: "campeones nacionales formados" },
+      { value: "7", label: "niveles de progresión por gorra" },
+      { value: "3+", label: "edades: niños, jóvenes, adultos" },
+    ],
   },
 
   // ─────────────────────────────────────────────
-  // BENEFICIOS / FEATURES (seccion de caracteristicas)
+  // PROGRAMAS (seccion nueva)
   // ─────────────────────────────────────────────
-  features: {
-    heading: "Todo lo que necesitas para lanzar",
-    subheading: "Caracteristicas disenadas para ayudarte a crecer.",
+  programs: {
+    heading: "Programas para cada tipo de nadador",
+    subheading:
+      "Desde los primeros brazadas hasta entrenamiento de alto rendimiento. Tú eliges el camino.",
     items: [
       {
-        icon: "lightning",
-        title: "Rapido y eficiente",
+        title: "Familias",
         description:
-          "Optimizado para velocidad. Tu sitio cargara en un instante y tus usuarios lo amaran.",
+          "Clases para niños y papás: técnica, seguridad en el agua y gusto por nadar.",
+        highlights: ["Niños y papás", "Grupos por nivel", "Ambiente cercano"],
       },
       {
-        icon: "mobile",
-        title: "Diseno responsive",
+        title: "Alto rendimiento",
         description:
-          "Se ve perfecto en cualquier dispositivo: celular, tablet o computadora.",
+          "Entrenamiento para atletas que buscan resultados: disciplina, seguimiento y metas claras.",
+        highlights: ["Plan de trabajo", "Enfoque competitivo", "Resultados medibles"],
       },
       {
-        icon: "settings",
-        title: "Facil de personalizar",
+        title: "Masters y triatlón",
         description:
-          "Cambia colores, textos e imagenes facilmente desde un solo archivo de configuracion.",
+          "Sesiones para mejorar resistencia y técnica, ideal si entrenas para competir o para sentirte más fuerte.",
+        highlights: ["Técnica + condición", "Ritmo y constancia", "Comunidad"],
+      },
+      {
+        title: "Escuelas",
+        description:
+          "Programas para que alumnos aprendan natación como parte de su formación y bienestar.",
+        highlights: ["Grupos escolares", "Seguridad acuática", "Logística simple"],
+      },
+      {
+        title: "Empresas",
+        description:
+          "Natación como beneficio: bienestar, salud y una actividad que sí se disfruta.",
+        highlights: ["Bienestar", "Horarios flexibles", "Planes a la medida"],
       },
     ],
   },
 
   // ─────────────────────────────────────────────
-  // PRECIOS (planes de pago)
+  // BENEFICIOS / FEATURES (lo que ofrecen)
+  // ─────────────────────────────────────────────
+  features: {
+    heading: "Lo que hace diferente a ADD",
+    subheading:
+      "Un espacio con luz, energía y orden: para aprender, entrenar y avanzar con confianza.",
+    items: [
+      {
+        icon: "lightning",
+        title: "Energía y motivación",
+        description:
+          "Un ambiente que empuja hacia adelante: niños felices aprendiendo y atletas dando su mejor esfuerzo.",
+      },
+      {
+        icon: "mobile",
+        title: "Programas por nivel",
+        description:
+          "Cada quien a su ritmo. Grupos y sesiones pensadas para que avances sin frustrarte.",
+      },
+      {
+        icon: "settings",
+        title: "Entrenamiento con intención",
+        description:
+          "Técnica clara, metas realistas y seguimiento. Menos improvisación, más progreso.",
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // LOGROS Y RESULTADOS (seccion nueva)
+  // ─────────────────────────────────────────────
+  achievements: {
+    heading: "Logros y resultados",
+    subheading:
+      "Trabajo constante, equipo unido y resultados que se notan en el agua.",
+    stats: [],
+    items: [
+      {
+        title: "Podios y clasificaciones",
+        description:
+          "Participación constante en competencias, con resultados que reflejan disciplina y técnica.",
+      },
+      {
+        title: "Mejoras medibles",
+        description:
+          "Seguimiento de tiempos y técnica para que el progreso sea claro, no solo una sensación.",
+      },
+      {
+        title: "Cultura de equipo",
+        description:
+          "Ambiente exigente pero humano: el objetivo es crecer, no solo aguantar.",
+      },
+    ],
+    note:
+      "Estos ejemplos son editables. Aquí puedes poner tus logros reales (competencias, medallas, clasificaciones, marcas).",
+  },
+
+  // ─────────────────────────────────────────────
+  // GALERIA (seccion nueva)
+  // ─────────────────────────────────────────────
+  gallery: {
+    heading: "Galería",
+    subheading:
+      "Instalaciones y ambiente: espacio abierto, luz y mucha vida en el agua.",
+    items: [
+      {
+        src: "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1600&q=80",
+        alt: "Nadador en alberca durante entrenamiento",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1600&q=80",
+        alt: "Alberca olímpica con carriles",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&w=1600&q=80",
+        alt: "Atleta nadador entrenando",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1560090995-01632a28895b?auto=format&fit=crop&w=1600&q=80",
+        alt: "Clavado en alberca",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1766038844091-5c1888e4a50f?auto=format&fit=crop&w=1600&q=80",
+        alt: "Acceso e instalaciones del club",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1600965962102-9d260a71890d?auto=format&fit=crop&w=1600&q=80",
+        alt: "Nadadores en plataformas de salida",
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // HORARIOS (seccion nueva)
+  // ─────────────────────────────────────────────
+  schedule: {
+    heading: "Horarios",
+    subheading:
+      "Horarios claros y fáciles de leer. Si quieres, te ayudamos a encontrar el mejor para tu familia o tu entrenamiento.",
+    groups: [
+      {
+        name: "Familias",
+        rows: [
+          { days: "Lunes a viernes", time: "6:00 am – 10:00 am", note: "" },
+          { days: "Lunes a viernes", time: "6:00 pm – 8:00 pm", note: "" },
+        ],
+      },
+      {
+        name: "Equipo y pre equipo",
+        rows: [
+          { days: "Lunes a viernes", time: "3:00 pm – 6:00 pm", note: "" },
+          { days: "Sábado", time: "9:00 am – 1:00 pm", note: "" },
+        ],
+      },
+      {
+        name: "Escuelas y empresas",
+        rows: [
+          { days: "Lunes a viernes", time: "10:00 am – 3:00 pm", note: "" },
+          { days: "Lunes a viernes", time: "6:00 pm – 8:00 pm", note: "" },
+        ],
+      },
+      {
+        name: "Masters y triatlón",
+        rows: [
+          { days: "Lunes a viernes", time: "6:00 am – 3:00 pm", note: "" },
+          { days: "Sábado", time: "9:00 am – 1:00 pm", note: "" },
+        ],
+      },
+    ],
+    note:
+      "Horarios sujetos a cambios por temporada. Escríbenos y te confirmamos el horario ideal.",
+  },
+
+  // ─────────────────────────────────────────────
+  // PRECIOS (planes)
   // ─────────────────────────────────────────────
   pricing: {
-    heading: "Precios simples y transparentes",
+    heading: "Planes",
     subheading:
-      "Elige el plan que mejor se adapte a tus necesidades. Sin costos ocultos.",
+      "Opciones claras. Si necesitas algo a la medida (escuelas, empresas o equipos), lo armamos contigo.",
     plans: [
       {
-        name: "Basico",
-        price: "$0",
-        period: "/mes",
-        description: "Perfecto para empezar",
-        features: [
-          "1 proyecto",
-          "Soporte por email",
-          "Actualizaciones basicas",
-        ],
-        cta: "Empezar gratis",
+        name: "Clases para familias",
+        price: "Desde $",
+        period: " / mes",
+        description: "Para niños y papás por nivel",
+        features: ["Grupos por nivel", "Enfoque en técnica y seguridad", "Ambiente cercano"],
+        cta: "Pedir costos",
         highlighted: false,
       },
       {
-        name: "Pro",
-        price: "$29",
-        period: "/mes",
-        description: "Para crecer tu negocio",
-        features: [
-          "Proyectos ilimitados",
-          "Soporte prioritario",
-          "Todas las funcionalidades",
-          "Analiticas avanzadas",
-        ],
-        cta: "Empezar ahora",
+        name: "Entrenamiento (Masters / Triatlón)",
+        price: "Desde $",
+        period: " / mes",
+        description: "Para mejorar condición y técnica",
+        features: ["Sesiones estructuradas", "Comunidad", "Progreso constante"],
+        cta: "Pedir costos",
         highlighted: true,
       },
       {
-        name: "Enterprise",
-        price: "$99",
-        period: "/mes",
-        description: "Para equipos grandes",
-        features: [
-          "Todo lo de Pro",
-          "Soporte dedicado 24/7",
-          "Integraciones custom",
-          "SLA garantizado",
-        ],
-        cta: "Contactar ventas",
+        name: "Renta de carriles",
+        price: "Cotización",
+        period: "",
+        description: "Para equipos, escuelas o grupos",
+        features: ["Horarios a convenir", "Espacio para entrenar", "Logística simple"],
+        cta: "Cotizar",
         highlighted: false,
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // EVENTOS (seccion nueva)
+  // ─────────────────────────────────────────────
+  events: {
+    heading: "Eventos",
+    subheading:
+      "Actividades y competencias próximas. Si quieres participar, te guiamos paso a paso.",
+    items: [
+      {
+        date: "Próximamente",
+        title: "Evaluación de niveles",
+        description:
+          "Una sesión para ubicar tu nivel y recomendarte el programa ideal.",
+        cta: "Preguntar fechas",
+        href: "#contacto",
+      },
+      {
+        date: "Próximamente",
+        title: "Clínica de técnica",
+        description:
+          "Tips prácticos para mejorar brazada, patada y respiración.",
+        cta: "Quiero apartar lugar",
+        href: "#contacto",
+      },
+      {
+        date: "Temporada",
+        title: "Competencias y fogueos",
+        description:
+          "Participación y preparación del equipo con objetivos claros.",
+        cta: "Saber más",
+        href: "#contacto",
       },
     ],
   },
@@ -118,32 +290,32 @@ export const siteConfig = {
   // ─────────────────────────────────────────────
   faq: {
     heading: "Preguntas frecuentes",
-    subheading: "Resolvemos tus dudas mas comunes.",
+    subheading: "Resolvemos las dudas más comunes, sin rodeos.",
     items: [
       {
-        question: "Como puedo empezar a usar la plantilla?",
+        question: "¿Desde qué edad pueden entrar los niños?",
         answer:
-          "Solo necesitas clonar el repositorio, instalar las dependencias con npm install y ejecutar npm run dev para verla en tu computadora.",
+          "Depende del nivel y del objetivo. Escríbenos y te decimos el mejor punto de entrada para tu hijo o hija.",
       },
       {
-        question: "Necesito saber programar?",
+        question: "¿También hay clases para adultos?",
         answer:
-          "No necesariamente. Puedes personalizar textos, colores e imagenes sin tocar codigo complejo. Solo edita el archivo src/config/site.js.",
+          "Sí. Tenemos opciones para adultos que quieren aprender, mejorar técnica o entrenar como masters/triatlón.",
       },
       {
-        question: "Puedo usar mi propio dominio?",
+        question: "¿Puedo probar antes de inscribirme?",
         answer:
-          "Si. Una vez que despliegues tu sitio en Vercel o cualquier otro hosting, puedes conectar tu dominio personalizado facilmente.",
+          "Claro. Podemos agendar una evaluación de nivel para recomendarte el grupo correcto.",
       },
       {
-        question: "Que metodos de pago aceptan?",
+        question: "¿Qué necesito llevar?",
         answer:
-          "Aceptamos tarjetas de credito y debito a traves de nuestra plataforma de pago segura.",
+          "Traje de baño, goggles y gorra. Si eres principiante, también podemos sugerirte el equipo ideal.",
       },
       {
-        question: "Ofrecen soporte tecnico?",
+        question: "¿Dónde están ubicados?",
         answer:
-          "Si. Todos los planes incluyen soporte por email. Los planes Pro y Enterprise tienen soporte prioritario.",
+          "En Chihuahua, Chihuahua. Envíanos mensaje y te compartimos ubicación exacta y cómo llegar.",
       },
     ],
   },
@@ -152,31 +324,27 @@ export const siteConfig = {
   // SECCION DE CONTACTO
   // ─────────────────────────────────────────────
   contact: {
-    heading: "Contactanos",
+    heading: "Contacto",
     subheading:
-      "Envianos un mensaje y te responderemos lo antes posible.",
-    // URL para agendar una cita (Calendly o Google Calendar)
-    // Si no tienes, deja el valor vacio: ""
+      "Cuéntanos qué estás buscando y te recomendamos el programa ideal.",
     schedulingUrl: "",
     schedulingCta: "Agendar una llamada",
     form: {
       namePlaceholder: "Tu nombre",
       emailPlaceholder: "tu@email.com",
-      // Telefono es opcional. Cambia phoneRequired a true si quieres hacerlo obligatorio.
-      phonePlaceholder: "Tu numero de telefono (opcional)",
+      phonePlaceholder: "Tu teléfono (opcional)",
       phoneRequired: false,
-      messagePlaceholder: "Escribe tu mensaje aqui...",
-      submitButton: "Enviar mensaje",
+      messagePlaceholder: "Escribe tu mensaje (edad, objetivo y horarios que te funcionan)...",
+      submitButton: "Enviar",
       sendingButton: "Enviando...",
       successMessage:
-        "Mensaje enviado correctamente. Revisa tu email.",
+        "Listo. Recibimos tu mensaje y te respondemos pronto.",
       errorMessage:
-        "Hubo un error al enviar. Intentalo de nuevo.",
+        "Hubo un problema al enviar. Inténtalo de nuevo.",
     },
-    // Datos de contacto opcionales para mostrar en el footer o sidebar
-    email: "hola@vibecoding.com",
+    email: "hola@add.com",
     phone: "",
-    address: "",
+    address: "Chihuahua, Chihuahua, México",
   },
 
   // ─────────────────────────────────────────────
@@ -185,22 +353,28 @@ export const siteConfig = {
   nav: {
     links: [
       { label: "Inicio", href: "#inicio" },
-      { label: "Features", href: "#features" },
-      { label: "Precios", href: "#precios" },
-      { label: "FAQ", href: "#faq" },
+      { label: "Programas", href: "#programas" },
+      { label: "Lo que ofrecemos", href: "#features" },
+      { label: "Logros", href: "#logros" },
+      { label: "Galería", href: "#galeria" },
+      { label: "Horarios", href: "#horarios" },
+      { label: "Planes", href: "#precios" },
+      { label: "Eventos", href: "#eventos" },
+      { label: "Preguntas", href: "#faq" },
       { label: "Contacto", href: "#contacto" },
     ],
+    cta: { label: "Agenda clase de prueba", href: "#contacto" },
   },
 
   // ─────────────────────────────────────────────
   // FOOTER
   // ─────────────────────────────────────────────
   footer: {
-    tagline: "Hecho con Next.js y mucho cafe.",
+    tagline: "Natación con energía, técnica y confianza.",
     links: [
-      { label: "Inicio", href: "#inicio" },
-      { label: "Features", href: "#features" },
-      { label: "Precios", href: "#precios" },
+      { label: "Programas", href: "#programas" },
+      { label: "Horarios", href: "#horarios" },
+      { label: "Planes", href: "#precios" },
       { label: "Contacto", href: "#contacto" },
     ],
     copyright: "Todos los derechos reservados.",
@@ -211,45 +385,37 @@ export const siteConfig = {
   // ─────────────────────────────────────────────
   email: {
     subject: "Recibimos tu mensaje",
-    teamSignature: "El equipo de VibeCoding",
-    // El remitente del email. Debe coincidir con tu dominio verificado en Resend.
+    teamSignature: "ADD",
     from: "onboarding@resend.dev",
   },
 
   // ─────────────────────────────────────────────
-  // COLORES PRINCIPALES (referencia para personalizar globals.css)
+  // COLORES PRINCIPALES (referencia)
   // ─────────────────────────────────────────────
-  // Estos valores son documentacion. Para cambiar colores en Tailwind v4,
-  // edita el archivo src/app/globals.css y modifica las variables CSS.
   colors: {
-    primary: "indigo-600",    // Color principal (botones, acentos)
-    secondary: "gray-900",    // Color de textos principales
-    accent: "indigo-50",      // Fondos suaves y badges
-    background: "white",      // Fondo general
+    primary: "slate-900",
+    secondary: "slate-600",
+    accent: "amber-500",
+    background: "white / slate-50",
   },
 
   // ─────────────────────────────────────────────
   // BOTON DE PAGO (PayPal)
   // ─────────────────────────────────────────────
   payment: {
-    // Cambia enabled a true cuando tengas tu cuenta de PayPal lista
     enabled: false,
-    // Tu nombre de usuario de PayPal.me
-    // Para obtenerlo: ve a paypal.com > Perfil > Configura tu link PayPal.me
-    // Ejemplo: si tu link es paypal.me/juanperez, escribe "juanperez"
     paypalMeUsername: "",
-    // Monto sugerido en dolares. Pon 0 para que el comprador elija cuanto pagar.
     defaultAmount: 0,
-    currency: "USD",
-    buttonText: "Pagar con PayPal",
+    currency: "MXN",
+    buttonText: "Pagar",
   },
 
   // ─────────────────────────────────────────────
-  // METADATOS SEO (lo que aparece en Google y redes sociales)
+  // METADATOS SEO
   // ─────────────────────────────────────────────
   metadata: {
-    title: "VibeCoding - Tu plantilla para lanzar rapido",
+    title: "ADD Natación | Chihuahua",
     description:
-      "La plantilla perfecta para lanzar tu idea al mundo. Rapido, moderno y listo para personalizar.",
+      "Escuela de natación para familias y alto rendimiento en Chihuahua. Programas para niños, papás, masters, triatlón, escuelas y empresas.",
   },
 };
