@@ -70,28 +70,28 @@ export async function POST(request) {
   // 3. Enviar email de confirmacion al lead
   // Si el email falla, igual devolvemos exito porque el lead ya quedo guardado
   try {
-    await resend.emails.send({
+    const resendResponse = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || siteConfig.email.from,
-      to: email,
-      subject: siteConfig.email.subject,
+      to: process.env.RESEND_NOTIFICATION_EMAIL,
+      subject: `Nuevo contacto: ${escapeHtml(name)}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; color: #111;">
-          <h2 style="color: #4f46e5;">Hola ${escapeHtml(name)},</h2>
-          <p>Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.</p>
-          ${phone ? `<p style="color: #666;">Tu telefono: <strong>${escapeHtml(phone)}</strong></p>` : ""}
-          <p style="color: #666; margin-top: 24px;">Tu mensaje:</p>
+          <h2 style="color: #4f46e5;">Nuevo mensaje de contacto</h2>
+          <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          ${phone ? `<p><strong>Teléfono:</strong> ${escapeHtml(phone)}</p>` : ""}
+          <p style="color: #666; margin-top: 24px;">Mensaje:</p>
           <blockquote style="border-left: 3px solid #4f46e5; padding-left: 16px; color: #444; margin: 8px 0;">
             ${escapeHtml(message)}
           </blockquote>
-          <p style="color: #999; font-size: 14px; margin-top: 32px;">
-            — ${escapeHtml(siteConfig.email.teamSignature)}
-          </p>
         </div>
       `,
     });
+    console.log("Respuesta de Resend:", JSON.stringify(resendResponse, null, 2));
   } catch (error) {
     // El lead quedo guardado aunque el email falle; solo lo registramos
-    console.error("Error al enviar email de confirmacion:", error);
+    console.error("Error al enviar email de confirmacion:", JSON.stringify(error, null, 2));
+    console.error("Detalles:", error?.message, error?.statusCode, error?.name);
   }
 
   return NextResponse.json({ success: true });
