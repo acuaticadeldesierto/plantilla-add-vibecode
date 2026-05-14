@@ -1,5 +1,13 @@
 import { siteConfig } from "@/config/site";
 
+function planHref(plan) {
+  if (plan.paypalAmount) {
+    const { paypalMeUsername, currency } = siteConfig.payment;
+    return `https://www.paypal.me/${paypalMeUsername}/${plan.paypalAmount}${currency}`;
+  }
+  return "#contacto";
+}
+
 export default function Pricing() {
   const { heading, subheading, plans } = siteConfig.pricing;
 
@@ -52,7 +60,9 @@ export default function Pricing() {
               </ul>
 
               <a
-                href="#contacto"
+                href={planHref(plan)}
+                target={plan.paypalAmount ? "_blank" : undefined}
+                rel={plan.paypalAmount ? "noopener noreferrer" : undefined}
                 className={`mt-8 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition-transform duration-300 hover:scale-[1.02] ${
                   plan.highlighted ? "bg-accent text-accent-foreground" : "bg-black text-white"
                 }`}

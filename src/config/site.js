@@ -222,26 +222,28 @@ export const siteConfig = {
     plans: [
       {
         name: "Clases para familias",
-        price: "Desde $",
+        price: "$1,499",
         period: " / mes",
-        description: "Para niños y papás por nivel",
+        description: "Para niños y papás por nivel (IVA 16% incluido)",
         features: ["Grupos por nivel", "Enfoque en técnica y seguridad", "Ambiente cercano"],
-        cta: "Pedir costos",
+        cta: "Pagar con PayPal",
+        paypalAmount: 1499,
         highlighted: false,
       },
       {
         name: "Entrenamiento (Masters / Triatlón)",
-        price: "Desde $",
+        price: "$1,999",
         period: " / mes",
         description: "Para mejorar condición y técnica",
         features: ["Sesiones estructuradas", "Comunidad", "Progreso constante"],
-        cta: "Pedir costos",
+        cta: "Pagar con PayPal",
+        paypalAmount: 1999,
         highlighted: true,
       },
       {
         name: "Renta de carriles",
-        price: "Cotización",
-        period: "",
+        price: "$20,000",
+        period: " / carril",
         description: "Para equipos, escuelas o grupos",
         features: ["Horarios a convenir", "Espacio para entrenar", "Logística simple"],
         cta: "Cotizar",
@@ -403,11 +405,11 @@ export const siteConfig = {
   // BOTON DE PAGO (PayPal)
   // ─────────────────────────────────────────────
   payment: {
-    enabled: false,
-    paypalMeUsername: "",
-    defaultAmount: 0,
+    enabled: true,
+    paypalMeUsername: "hectormj82",
+    defaultAmount: 1499,
     currency: "MXN",
-    buttonText: "Pagar",
+    buttonText: "Pagar con PayPal",
   },
 
   // ─────────────────────────────────────────────
