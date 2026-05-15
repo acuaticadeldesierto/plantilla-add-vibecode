@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Programs from "@/components/Programs";
 import Features from "@/components/Features";
 import Achievements from "@/components/Achievements";
+import Caps from "@/components/Caps";
 import Gallery from "@/components/Gallery";
 import Schedule from "@/components/Schedule";
 import Pricing from "@/components/Pricing";
@@ -20,6 +21,7 @@ export default function Home() {
         <Programs />
         <Features />
         <Achievements />
+        <Caps />
         <Gallery />
         <Schedule />
         <Pricing />

@@ -177,7 +177,7 @@ export const siteConfig = {
   // SISTEMA DE GORRAS (7 niveles de progresión)
   // ─────────────────────────────────────────────
   caps: {
-    enabled: false, // ponlo en true cuando quieras mostrar esta sección
+    enabled: true, // ponlo en true cuando quieras mostrar esta sección
     heading: "Las gorras son tu mapa.",
     subheading: "Cada nivel se gana, no se compra.",
     intro:
