@@ -25,10 +25,10 @@ export default function Features() {
     <section id="features" className="section-pad bg-background">
       <div className="container-wide">
         <div className="max-w-3xl mb-16 md:mb-20">
-          <p className="eyebrow text-accent mb-5">Lo que ofrecemos</p>
-          <h2 className="display-2 text-[hsl(var(--foreground))]">
+          <p className="eyebrow text-accent mb-5">El método</p>
+          <h2 className="display-2 text-foreground">
             {heading} <br />
-            <span className="italic font-light text-black/50">{subheading}</span>
+            <span className="italic font-light text-muted-foreground">{subheading}</span>
           </h2>
         </div>
 
@@ -36,15 +36,15 @@ export default function Features() {
           {items.map((feature, index) => (
             <article
               key={index}
-              className="rounded-2xl border border-black/10 bg-white p-8 lg:p-10 transition-all duration-500 hover:-translate-y-1 hover:shadow-md"
+              className="rounded-2xl border border-border bg-background p-8 lg:p-10 transition-all duration-500 hover:-translate-y-1 hover:shadow-card"
             >
-              <div className="mb-5 inline-flex size-12 items-center justify-center rounded-2xl bg-surface-light text-[hsl(var(--foreground))]">
+              <div className="mb-5 inline-flex size-12 items-center justify-center rounded-2xl bg-surface-light text-foreground">
                 {iconMap[feature.icon] ?? iconMap.settings}
               </div>
-              <h3 className="font-serif text-2xl tracking-tight text-[hsl(var(--foreground))] mb-4">
+              <h3 className="font-serif text-2xl tracking-tight text-foreground mb-4">
                 {feature.title}
               </h3>
-              <p className="text-base leading-relaxed text-black/60">{feature.description}</p>
+              <p className="text-base leading-relaxed text-muted-foreground">{feature.description}</p>
             </article>
           ))}
         </div>

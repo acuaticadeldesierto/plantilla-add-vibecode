@@ -8,9 +8,9 @@ export default function Events() {
       <div className="container-wide">
         <div className="max-w-3xl mb-16 md:mb-20">
           <p className="eyebrow text-accent mb-5">Eventos</p>
-          <h2 className="display-2 text-[hsl(var(--foreground))]">
+          <h2 className="display-2 text-foreground">
             {heading} <br />
-            <span className="italic font-light text-black/50">{subheading}</span>
+            <span className="italic font-light text-muted-foreground">{subheading}</span>
           </h2>
         </div>
 
@@ -18,22 +18,22 @@ export default function Events() {
           {items.map((event) => (
             <div
               key={`${event.date}-${event.title}`}
-              className="bg-white border border-black/10 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-md"
+              className="bg-background border border-border rounded-2xl p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-card"
             >
               <div className="flex items-center justify-between gap-4 mb-4">
-                <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-surface-light border border-black/10 text-black/70">
+                <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-surface-light border border-border text-muted-foreground">
                   {event.date}
                 </span>
-                <span className="inline-flex items-center gap-2 text-xs text-slate-600">
+                <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
                   <span className="inline-block w-2 h-2 rounded-full bg-accent" aria-hidden="true" />
                   Próximo
                 </span>
               </div>
 
-              <h3 className="font-serif text-2xl tracking-tight text-[hsl(var(--foreground))] mb-3">
+              <h3 className="font-serif text-2xl tracking-tight text-foreground mb-3">
                 {event.title}
               </h3>
-              <p className="text-base leading-relaxed text-black/60 mb-6">
+              <p className="text-base leading-relaxed text-muted-foreground mb-6">
                 {event.description}
               </p>
 

@@ -4,13 +4,13 @@ export default function Gallery() {
   const { heading, subheading, items } = siteConfig.gallery;
 
   return (
-    <section id="galeria" className="section-pad bg-background">
+    <section id="galeria" className="section-pad bg-surface-light">
       <div className="container-wide">
         <div className="max-w-3xl mb-16 md:mb-20">
           <p className="eyebrow text-accent mb-5">Galería</p>
-          <h2 className="display-2 text-[hsl(var(--foreground))]">
+          <h2 className="display-2 text-foreground">
             {heading} <br />
-            <span className="italic font-light text-black/50">{subheading}</span>
+            <span className="italic font-light text-muted-foreground">{subheading}</span>
           </h2>
         </div>
 
@@ -18,7 +18,7 @@ export default function Gallery() {
           {items.map((photo) => (
             <div
               key={photo.src}
-              className="relative overflow-hidden rounded-2xl border border-black/10 bg-surface-light"
+              className="relative overflow-hidden rounded-2xl border border-border bg-background"
             >
               <div className="relative w-full aspect-[4/3]">
                 <img
@@ -30,7 +30,7 @@ export default function Gallery() {
                 />
               </div>
               <div className="px-5 py-4">
-                <p className="text-sm text-black/60">{photo.alt}</p>
+                <p className="text-sm text-muted-foreground">{photo.alt}</p>
               </div>
             </div>
           ))}

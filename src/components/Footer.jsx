@@ -1,8 +1,22 @@
 import { siteConfig } from "@/config/site";
 
+const InstagramIcon = () => (
+  <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} aria-hidden="true">
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+  </svg>
+);
+
+const FacebookIcon = () => (
+  <svg className="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M13 22v-8h3l1-4h-4V7.5c0-1 .3-1.7 1.8-1.7H17V2.2c-.3 0-1.4-.2-2.6-.2-2.6 0-4.4 1.6-4.4 4.4V10H7v4h3v8h3z" />
+  </svg>
+);
+
 export default function Footer() {
   const { name } = siteConfig;
-  const { tagline, links, copyright } = siteConfig.footer;
+  const { tagline, links, copyright, address, social, madeWith } = siteConfig.footer;
 
   return (
     <footer className="bg-surface-darker text-white border-t border-white/5">
@@ -39,11 +53,44 @@ export default function Footer() {
 
           <div className="md:col-span-4">
             <p className="text-xs uppercase tracking-[0.18em] text-white/40 mb-4">
-              Contacto
+              Visítanos
             </p>
-            <p className="text-sm text-white/75 leading-relaxed">
-              Chihuahua, Chihuahua, México
-            </p>
+            {address ? (
+              <p className="text-sm text-white/75 leading-relaxed">
+                {address.line}
+                <br />
+                {address.city}
+                <br />
+                {address.country}
+              </p>
+            ) : null}
+
+            {social && (social.instagram || social.facebook) ? (
+              <div className="mt-6 flex items-center gap-3">
+                {social.instagram ? (
+                  <a
+                    href={social.instagram}
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex size-10 items-center justify-center rounded-full border border-white/15 hover:border-accent hover:text-accent transition-colors"
+                  >
+                    <InstagramIcon />
+                  </a>
+                ) : null}
+                {social.facebook ? (
+                  <a
+                    href={social.facebook}
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex size-10 items-center justify-center rounded-full border border-white/15 hover:border-accent hover:text-accent transition-colors"
+                  >
+                    <FacebookIcon />
+                  </a>
+                ) : null}
+              </div>
+            ) : null}
           </div>
         </div>
 
@@ -51,7 +98,7 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {name}. {copyright}
           </p>
-          <p>Hecho con disciplina en Chihuahua.</p>
+          {madeWith ? <p>{madeWith}</p> : null}
         </div>
       </div>
     </footer>

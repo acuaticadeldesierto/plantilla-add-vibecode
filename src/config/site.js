@@ -10,27 +10,26 @@ export const siteConfig = {
   // INFORMACION DEL NEGOCIO
   // ─────────────────────────────────────────────
   name: "ADD",
-  tagline: "Escuela de natación para familias y alto rendimiento.",
+  tagline: "Escuela de Natación premium en Chihuahua.",
   description:
-    "En Chihuahua, Chihuahua. Clases para niños y papás, entrenamiento de alto rendimiento, masters y triatlón, y renta de carriles para equipos.",
+    "Dirigida por NTP, entrenador olímpico Tokyo 2020. Programas para niños, jóvenes, adultos, masters y triatlón. Sede en El Reliz, Chihuahua.",
 
   // ─────────────────────────────────────────────
   // SECCION HERO (primera pantalla)
   // ─────────────────────────────────────────────
   hero: {
-    badge: "Chihuahua, Chihuahua",
-    title: "Vive el cambio de",
-    titleHighlight: "la natación en México",
+    badge: "Chihuahua · El Reliz",
+    title: "Nadar bien",
+    titleHighlight: "no es un deporte. Es una disciplina.",
     subtitle:
-      "Un lugar cercano y motivador para aprender a nadar, entrenar en serio y disfrutar la alberca en familia. Programas para niños, papás, masters, triatlón, escuelas y empresas.",
-    ctaPrimary: "Quiero información",
-    ctaSecondary: "Ver programas",
+      "Una escuela de natación dirigida por un entrenador olímpico, con un sistema de progresión claro para niños, jóvenes y adultos. Desde la primera brazada hasta el podio nacional.",
+    ctaPrimary: "Agenda clase de prueba",
+    ctaSecondary: "Conoce al entrenador",
     ctaPrimaryUrl: "#contacto",
-    ctaSecondaryUrl: "#programas",
-    backgroundImage:
-      "/hero-swimmer.jpg",
+    ctaSecondaryUrl: "#logros",
+    backgroundImage: "/hero-swimmer.jpg",
     stats: [
-      { value: "Chihuahua · El Reliz", label: "Sede" },
+      { value: "Tokyo", label: "2020 · entrenador olímpico" },
       { value: "15", label: "campeones nacionales formados" },
       { value: "7", label: "niveles de progresión por gorra" },
       { value: "3+", label: "edades: niños, jóvenes, adultos" },
@@ -38,30 +37,30 @@ export const siteConfig = {
   },
 
   // ─────────────────────────────────────────────
-  // PROGRAMAS (seccion nueva)
+  // PROGRAMAS
   // ─────────────────────────────────────────────
   programs: {
     heading: "Programas para cada tipo de nadador",
     subheading:
-      "Desde los primeros brazadas hasta entrenamiento de alto rendimiento. Tú eliges el camino.",
+      "Desde las primeras brazadas hasta entrenamiento de alto rendimiento. Tú eliges el camino.",
     items: [
       {
         title: "Familias",
         description:
           "Clases para niños y papás: técnica, seguridad en el agua y gusto por nadar.",
-        highlights: ["Niños y papás", "Grupos por nivel", "Ambiente cercano"],
+        highlights: ["Grupos por nivel, no por edad", "Coach ratio 1:6", "Evaluación trimestral por gorra"],
       },
       {
         title: "Alto rendimiento",
         description:
           "Entrenamiento para atletas que buscan resultados: disciplina, seguimiento y metas claras.",
-        highlights: ["Plan de trabajo", "Enfoque competitivo", "Resultados medibles"],
+        highlights: ["Análisis de video", "Acompañamiento a competencias", "Plan dual: escuela + alberca"],
       },
       {
         title: "Masters y triatlón",
         description:
           "Sesiones para mejorar resistencia y técnica, ideal si entrenas para competir o para sentirte más fuerte.",
-        highlights: ["Técnica + condición", "Ritmo y constancia", "Comunidad"],
+        highlights: ["Horarios early-bird y noche", "Grupos pequeños y discretos", "Plan de mejora postural"],
       },
       {
         title: "Escuelas",
@@ -84,66 +83,73 @@ export const siteConfig = {
   features: {
     heading: "Lo que hace diferente a ADD",
     subheading:
-      "Un espacio con luz, energía y orden: para aprender, entrenar y avanzar con confianza.",
+      "Estándares olímpicos, accesibles para cualquier persona que quiera empezar.",
     items: [
       {
         icon: "lightning",
-        title: "Energía y motivación",
+        title: "Coach olímpico",
         description:
-          "Un ambiente que empuja hacia adelante: niños felices aprendiendo y atletas dando su mejor esfuerzo.",
+          "Entrenamiento dirigido por NTP, parte de la delegación mexicana en Tokyo 2020. Su sistema es lo que vas a aprender.",
       },
       {
         icon: "mobile",
-        title: "Programas por nivel",
+        title: "Sistema de 7 niveles",
         description:
-          "Cada quien a su ritmo. Grupos y sesiones pensadas para que avances sin frustrarte.",
+          "Cada gorra marca dónde estás y qué sigue. Transparencia para padres, disciplina para atletas, motivación para todos.",
       },
       {
         icon: "settings",
-        title: "Entrenamiento con intención",
+        title: "Coach ratio 1:6",
         description:
-          "Técnica clara, metas realistas y seguimiento. Menos improvisación, más progreso.",
+          "Grupos pequeños con seguimiento individual y evaluación trimestral. Avanzas al ritmo correcto, no al apresurado.",
       },
     ],
   },
 
   // ─────────────────────────────────────────────
-  // LOGROS Y RESULTADOS (seccion nueva)
+  // LOGROS Y RESULTADOS (estilo Differentiator)
   // ─────────────────────────────────────────────
   achievements: {
-    heading: "Logros y resultados",
-    subheading:
-      "Trabajo constante, equipo unido y resultados que se notan en el agua.",
-    stats: [],
+    heading: "No aprendes con cualquiera.",
+    subheading: "Aprendes con NTP.",
+    intro:
+      "Entrenador olímpico mexicano, parte de la delegación nacional en Tokyo 2020. Formador de 15 campeones nacionales en categorías infantil, juvenil y abierta. Su sistema es lo que vas a aprender.",
+    coachImage: "/coach-portrait.jpg",
+    coachName: "NTP",
+    coachRole: "Head Coach · Fundador",
     items: [
       {
-        title: "Podios y clasificaciones",
-        description:
-          "Participación constante en competencias, con resultados que reflejan disciplina y técnica.",
+        number: "2020",
+        title: "Tokyo · juegos olímpicos",
+        description: "Delegación mexicana de natación",
+        accent: false,
       },
       {
-        title: "Mejoras medibles",
-        description:
-          "Seguimiento de tiempos y técnica para que el progreso sea claro, no solo una sensación.",
+        number: "15",
+        title: "Campeones nacionales formados",
+        description: "Categorías infantil, juvenil y abierta",
+        accent: true,
       },
       {
-        title: "Cultura de equipo",
-        description:
-          "Ambiente exigente pero humano: el objetivo es crecer, no solo aguantar.",
+        number: "20+",
+        title: "Años de carrera competitiva",
+        description: "Como atleta y como coach",
+        accent: false,
       },
     ],
-    note:
-      "Estos ejemplos son editables. Aquí puedes poner tus logros reales (competencias, medallas, clasificaciones, marcas).",
   },
 
   // ─────────────────────────────────────────────
-  // GALERIA (seccion nueva)
+  // GALERIA
   // ─────────────────────────────────────────────
   gallery: {
-    heading: "Galería",
-    subheading:
-      "Instalaciones y ambiente: espacio abierto, luz y mucha vida en el agua.",
+    heading: "Las instalaciones.",
+    subheading: "Diseñadas para entrenamiento serio, con la comodidad que tu familia espera.",
     items: [
+      {
+        src: "/facility.jpg",
+        alt: "Vista aérea de las instalaciones ADD al atardecer en Chihuahua",
+      },
       {
         src: "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1600&q=80",
         alt: "Nadador en alberca durante entrenamiento",
@@ -161,10 +167,6 @@ export const siteConfig = {
         alt: "Clavado en alberca",
       },
       {
-        src: "https://images.unsplash.com/photo-1766038844091-5c1888e4a50f?auto=format&fit=crop&w=1600&q=80",
-        alt: "Acceso e instalaciones del club",
-      },
-      {
         src: "https://images.unsplash.com/photo-1600965962102-9d260a71890d?auto=format&fit=crop&w=1600&q=80",
         alt: "Nadadores en plataformas de salida",
       },
@@ -172,12 +174,88 @@ export const siteConfig = {
   },
 
   // ─────────────────────────────────────────────
-  // HORARIOS (seccion nueva)
+  // SISTEMA DE GORRAS (7 niveles de progresión)
+  // ─────────────────────────────────────────────
+  caps: {
+    enabled: false, // ponlo en true cuando quieras mostrar esta sección
+    heading: "Las gorras son tu mapa.",
+    subheading: "Cada nivel se gana, no se compra.",
+    intro:
+      "Una gorra de color marca exactamente dónde estás y qué sigue. Es transparencia para los padres, disciplina para los atletas, y motivación para todos.",
+    items: [
+      {
+        id: "blanca",
+        name: "Blanca",
+        level: "Iniciación",
+        color: "hsl(0 0% 96%)",
+        ring: "hsl(220 13% 80%)",
+        description: "Primer contacto con el agua. Flotación, respiración y confianza.",
+        requirements: "Sin requisitos previos.",
+      },
+      {
+        id: "amarilla",
+        name: "Amarilla",
+        level: "Adaptación",
+        color: "hsl(48 96% 60%)",
+        ring: "hsl(45 90% 45%)",
+        description: "Desplazamientos básicos y técnica de patada.",
+        requirements: "Flotación autónoma 10 segundos.",
+      },
+      {
+        id: "verde",
+        name: "Verde",
+        level: "Técnica I",
+        color: "hsl(142 60% 42%)",
+        ring: "hsl(142 65% 30%)",
+        description: "Crol y dorso con coordinación brazo-respiración.",
+        requirements: "25m crol con apoyo.",
+      },
+      {
+        id: "azul",
+        name: "Azul",
+        level: "Técnica II",
+        color: "hsl(220 70% 35%)",
+        ring: "hsl(220 75% 22%)",
+        description: "Pecho y mariposa. Resistencia aeróbica básica.",
+        requirements: "100m continuos.",
+      },
+      {
+        id: "roja",
+        name: "Roja",
+        level: "Perfeccionamiento",
+        color: "hsl(0 72% 48%)",
+        ring: "hsl(0 75% 35%)",
+        description: "Cuatro estilos. Salidas, vueltas y entrada al pre-equipo.",
+        requirements: "200m combinado.",
+      },
+      {
+        id: "negra",
+        name: "Negra",
+        level: "Pre-competitivo",
+        color: "hsl(222 47% 11%)",
+        ring: "hsl(222 47% 5%)",
+        description: "Volumen, ritmo y estrategia de competencia.",
+        requirements: "Tiempos mínimos por prueba.",
+      },
+      {
+        id: "dragon",
+        name: "Dragón de Fuego",
+        level: "Élite",
+        color: "hsl(21 94% 53%)",
+        ring: "hsl(43 80% 47%)",
+        description: "Atletas de alto rendimiento. Camino a campeonatos nacionales.",
+        requirements: "Por invitación del head coach.",
+        isElite: true,
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // HORARIOS
   // ─────────────────────────────────────────────
   schedule: {
-    heading: "Horarios",
-    subheading:
-      "Horarios claros y fáciles de leer. Si quieres, te ayudamos a encontrar el mejor para tu familia o tu entrenamiento.",
+    heading: "Horarios.",
+    subheading: "Encuentra el mejor para tu familia o tu entrenamiento.",
     groups: [
       {
         name: "Familias",
@@ -216,9 +294,8 @@ export const siteConfig = {
   // PRECIOS (planes)
   // ─────────────────────────────────────────────
   pricing: {
-    heading: "Planes",
-    subheading:
-      "Opciones claras. Si necesitas algo a la medida (escuelas, empresas o equipos), lo armamos contigo.",
+    heading: "Transparente.",
+    subheading: "Sin letras chiquitas.",
     plans: [
       {
         name: "Clases para familias",
@@ -253,12 +330,11 @@ export const siteConfig = {
   },
 
   // ─────────────────────────────────────────────
-  // EVENTOS (seccion nueva)
+  // EVENTOS
   // ─────────────────────────────────────────────
   events: {
-    heading: "Eventos",
-    subheading:
-      "Actividades y competencias próximas. Si quieres participar, te guiamos paso a paso.",
+    heading: "Eventos.",
+    subheading: "Actividades y competencias próximas. Si quieres participar, te guiamos paso a paso.",
     items: [
       {
         date: "Próximamente",
@@ -291,23 +367,23 @@ export const siteConfig = {
   // PREGUNTAS FRECUENTES (FAQ)
   // ─────────────────────────────────────────────
   faq: {
-    heading: "Preguntas frecuentes",
+    heading: "Preguntas frecuentes.",
     subheading: "Resolvemos las dudas más comunes, sin rodeos.",
     items: [
       {
         question: "¿Desde qué edad pueden entrar los niños?",
         answer:
-          "Depende del nivel y del objetivo. Escríbenos y te decimos el mejor punto de entrada para tu hijo o hija.",
+          "Desde los 3 años. El nivel y la frecuencia las definimos en la evaluación inicial.",
       },
       {
         question: "¿También hay clases para adultos?",
         answer:
-          "Sí. Tenemos opciones para adultos que quieren aprender, mejorar técnica o entrenar como masters/triatlón.",
+          "Sí. Tenemos opciones para adultos que quieren aprender desde cero, mejorar técnica o entrenar como masters/triatlón.",
       },
       {
         question: "¿Puedo probar antes de inscribirme?",
         answer:
-          "Claro. Podemos agendar una evaluación de nivel para recomendarte el grupo correcto.",
+          "Claro. Agendamos una clase de prueba y una evaluación de nivel para recomendarte el grupo correcto.",
       },
       {
         question: "¿Qué necesito llevar?",
@@ -317,7 +393,7 @@ export const siteConfig = {
       {
         question: "¿Dónde están ubicados?",
         answer:
-          "En Chihuahua, Chihuahua. Envíanos mensaje y te compartimos ubicación exacta y cómo llegar.",
+          "En Fraccionamiento El Reliz, Chihuahua, México. Envíanos mensaje y te compartimos ubicación exacta y cómo llegar.",
       },
     ],
   },
@@ -326,19 +402,18 @@ export const siteConfig = {
   // SECCION DE CONTACTO
   // ─────────────────────────────────────────────
   contact: {
-    heading: "Contacto",
-    subheading:
-      "Cuéntanos qué estás buscando y te recomendamos el programa ideal.",
+    heading: "Una clase de prueba",
+    subheading: "vale más que mil promesas.",
     schedulingUrl: "",
     schedulingCta: "Agendar una llamada",
     form: {
-      namePlaceholder: "Tu nombre",
+      namePlaceholder: "Ej. María González",
       emailPlaceholder: "tu@email.com",
-      phonePlaceholder: "Tu teléfono (opcional)",
+      phonePlaceholder: "614 123 4567",
       phoneRequired: false,
-      messagePlaceholder: "Escribe tu mensaje (edad, objetivo y horarios que te funcionan)...",
-      submitButton: "Enviar",
-      sendingButton: "Enviando...",
+      messagePlaceholder: "Aprender desde cero, competencia, ejercicio…",
+      submitButton: "Agenda mi clase de prueba",
+      sendingButton: "Enviando…",
       successMessage:
         "Listo. Recibimos tu mensaje y te respondemos pronto.",
       errorMessage:
@@ -346,7 +421,8 @@ export const siteConfig = {
     },
     email: "hola@add.com",
     phone: "",
-    address: "Chihuahua, Chihuahua, México",
+    address: "El Reliz · Chihuahua, México",
+    hours: "Lunes a sábado · 6:00 — 21:00",
   },
 
   // ─────────────────────────────────────────────
@@ -356,12 +432,11 @@ export const siteConfig = {
     links: [
       { label: "Inicio", href: "#inicio" },
       { label: "Programas", href: "#programas" },
-      { label: "Lo que ofrecemos", href: "#features" },
-      { label: "Logros", href: "#logros" },
-      { label: "Galería", href: "#galeria" },
+      { label: "Método", href: "#features" },
+      { label: "Entrenador", href: "#logros" },
+      { label: "Instalaciones", href: "#galeria" },
       { label: "Horarios", href: "#horarios" },
       { label: "Planes", href: "#precios" },
-      { label: "Eventos", href: "#eventos" },
       { label: "Preguntas", href: "#faq" },
       { label: "Contacto", href: "#contacto" },
     ],
@@ -372,14 +447,26 @@ export const siteConfig = {
   // FOOTER
   // ─────────────────────────────────────────────
   footer: {
-    tagline: "Natación con energía, técnica y confianza.",
+    tagline:
+      "Escuela de Natación premium en Chihuahua. Dirigida por NTP, entrenador olímpico Tokyo 2020.",
+    address: {
+      line: "Fraccionamiento El Reliz",
+      city: "Chihuahua, Chih.",
+      country: "México",
+    },
+    social: {
+      instagram: "https://instagram.com/add.natacion",
+      facebook: "https://facebook.com/add.natacion",
+    },
     links: [
       { label: "Programas", href: "#programas" },
+      { label: "Entrenador", href: "#logros" },
       { label: "Horarios", href: "#horarios" },
       { label: "Planes", href: "#precios" },
       { label: "Contacto", href: "#contacto" },
     ],
     copyright: "Todos los derechos reservados.",
+    madeWith: "Hecho con disciplina en Chihuahua.",
   },
 
   // ─────────────────────────────────────────────
@@ -392,13 +479,13 @@ export const siteConfig = {
   },
 
   // ─────────────────────────────────────────────
-  // COLORES PRINCIPALES (referencia)
+  // COLORES PRINCIPALES (referencia documental)
   // ─────────────────────────────────────────────
   colors: {
-    primary: "slate-900",
-    secondary: "slate-600",
-    accent: "amber-500",
-    background: "white / slate-50",
+    primary: "deep-navy (#0A1F44)",
+    accent: "orange (#F97316)",
+    gold: "gold (#D4A017)",
+    surface: "white / surface-light / surface-darker",
   },
 
   // ─────────────────────────────────────────────
@@ -418,6 +505,6 @@ export const siteConfig = {
   metadata: {
     title: "ADD Natación | Chihuahua",
     description:
-      "Escuela de natación para familias y alto rendimiento en Chihuahua. Programas para niños, papás, masters, triatlón, escuelas y empresas.",
+      "Escuela de natación premium en Chihuahua dirigida por NTP, entrenador olímpico Tokyo 2020. Programas para niños, jóvenes, adultos, masters y triatlón.",
   },
 };
